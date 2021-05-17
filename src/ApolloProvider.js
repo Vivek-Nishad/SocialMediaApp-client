@@ -1,22 +1,17 @@
 import React from "react";
 import App from "./App";
-// import ApolloClient from "apollo-client";
-// import { InMemoryCache } from "apollo-cache-inMemory";
-// import { createHttpLink } from "apollo-link-http";
-// import { ApolloProvider } from "@apollo/react-hooks";
 
-// import {ApolloClient,InMemoryCache,ApolloProvider,createHttpLink,httpLink,from} from '@apollo/client'
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
 } from "@apollo/client";
-// import { setContext } from "apollo-link-context";
 import { setContext } from "@apollo/client/link/context";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:5000",
+  // uri: "http://localhost:5000",
+  uri: "https://social-media-vk.herokuapp.com/", //heroku
 });
 
 const authLink = setContext(() => {
@@ -30,7 +25,6 @@ const authLink = setContext(() => {
 
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
-  // link: httpLink,
   cache: new InMemoryCache(),
 });
 
