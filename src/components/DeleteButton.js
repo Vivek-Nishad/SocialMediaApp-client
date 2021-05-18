@@ -1,15 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import gql from "graphql-tag";
 import { useMutation } from "@apollo/client";
-import {
-  Card,
-  Icon,
-  Label,
-  Image,
-  Button,
-  Confirm,
-  Popup,
-} from "semantic-ui-react";
+import { Icon, Button, Confirm, Popup } from "semantic-ui-react";
 
 import { FETCH_POSTS_QUERY } from "../util/graphql";
 
@@ -55,7 +47,6 @@ export default function DeleteButton({ postId, commentId, callback }) {
             floated="right"
             onClick={() => {
               setConfirmOpen(true);
-              console.log("Delete post");
             }}
           >
             <Icon name="trash" style={{ margin: 0 }} />

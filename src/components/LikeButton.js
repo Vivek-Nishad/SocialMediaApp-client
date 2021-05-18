@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import gql from "graphql-tag";
-import { Card, Icon, Label, Image, Button, Popup } from "semantic-ui-react";
+import { Icon, Label, Button, Popup } from "semantic-ui-react";
 
 export default function LikeButton({ user, post: { id, likeCount, likes } }) {
   const [liked, setLiked] = useState(false);
@@ -34,7 +34,7 @@ export default function LikeButton({ user, post: { id, likeCount, likes } }) {
   );
 
   return (
-    <div>
+    <div className="likeBtn">
       <Popup
         content={liked ? "Unlike" : "Like"}
         inverted

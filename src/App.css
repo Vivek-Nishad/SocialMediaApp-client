@@ -6,11 +6,6 @@
 }
 
 .form-container {
-  width: 400px;
-  margin: auto;
-  /* text-align: center; */
-}
-/* .form-container {
   width: 40%;
   margin: auto;
   text-align: center;
@@ -18,10 +13,14 @@
 
 .form-btn {
   margin-top: 15px !important;
-  width: 80%;
-} */
+  width: 100%;
+}
 
 .ui.teal.button:focus,
 .ui.teal.buttons .button:focus {
   background-color: #00b5ad;
+}
+
+.likeBtn {
+  display: inline !important;
 }

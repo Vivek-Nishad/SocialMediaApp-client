@@ -49,8 +49,6 @@ function AuthProvider(props) {
     });
   }
 
-  //   const logout = () => dispatch({ type: "LOGOUT" });
-
   function logout() {
     localStorage.removeItem("SMA-jwtToken");
     dispatch({ type: "LOGOUT" });
